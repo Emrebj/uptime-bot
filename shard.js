@@ -3,7 +3,7 @@ const ayarlar = require('./config.json');
 
 const manager = new ShardingManager('./index.js', {
     shardCount: 'auto',
-    token: ayarlar.token
+    token: process.env.token
 });
 
 // Sunucu oluşturma ve proje aktivitesi sağlama.
